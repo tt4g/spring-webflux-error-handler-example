@@ -1,0 +1,21 @@
+# Enable reactive WEB application (WebFlux).
+# https://github.com/spring-projects/spring-boot/issues/22162
+spring.main.web-application-type: REACTIVE
+server.port: 8080
+spring.mvc.servlet.path: /
+server.servlet.context-path: /
+spring.webflux.base-path: /
+
+# Graceful shutdown.
+server.shutdown: graceful
+spring.lifecycle.timeout-per-shutdown-phase: 30s
+
+# For more details Request logging.
+spring.mvc.log-request-details: true
+spring.codec.log-request-details: true
+
+logging.file.clean-history-on-start: true
+logging.file.name: log/spring-webflux-error-handler-example.log
+logging.file.max-history: 7
+logging.register-shutdown-hook: true
+logging.level.root: DEBUG
