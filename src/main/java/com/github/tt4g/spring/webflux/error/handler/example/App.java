@@ -1,5 +1,6 @@
 package com.github.tt4g.spring.webflux.error.handler.example;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.reactive.config.EnableWebFlux;
 
@@ -8,7 +9,7 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 public class App {
 
     public static void main(String[] args) {
-
+        SpringApplication.run(App.class, args);
     }
 
 }
